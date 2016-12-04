@@ -48,5 +48,7 @@ def move_with_facing(coords, facing, blocks):
 
 if __name__ == '__main__':
     destination_coordinates = calculate_destination_coordinates(INPUT)
-    print(destination_coordinates)
-    raise NotImplementedError()
+    abs_coords = {'x': abs(destination_coordinates['x']),
+                  'y': abs(destination_coordinates['y'])}
+    shortest_distance = abs_coords['x'] + abs_coords['y']
+    print('Shortest distance: {}'.format(shortest_distance))
