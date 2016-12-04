@@ -36,8 +36,15 @@ def facing_from_turn(facing, turn):
 
 
 def move_with_facing(coords, facing, blocks):
-    raise NotImplementedError()
-
+    if facing == 'N':
+        coords['y'] += blocks
+    if facing == 'E':
+        coords['x'] += blocks
+    if facing == 'S':
+        coords['y'] -= blocks
+    if facing == 'W':
+        coords['x'] -= blocks
+    return coords
 
 if __name__ == '__main__':
     destination_coordinates = calculate_destination_coordinates(INPUT)
