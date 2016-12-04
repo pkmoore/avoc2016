@@ -13,7 +13,26 @@ def calculate_destination_coordinates(directions):
 
 
 def facing_from_turn(facing, turn):
-    raise NotImplementedError()
+    if facing == 'N':
+        if turn == 'L':
+            return 'W'
+        if turn == 'R':
+            return 'E'
+    if facing == 'E':
+        if turn == 'L':
+            return 'N'
+        if turn == 'R':
+            return 'S'
+    if facing == 'S':
+        if turn == 'L':
+            return 'E'
+        if turn == 'R':
+            return 'W'
+    if facing == 'W':
+        if turn == 'L':
+            return 'S'
+        if turn == 'R':
+            return 'N'
 
 
 def move_with_facing(coords, facing, blocks):
@@ -23,3 +42,4 @@ def move_with_facing(coords, facing, blocks):
 if __name__ == '__main__':
     destination_coordinates = calculate_destination_coordinates(INPUT)
     print(destination_coordinates)
+    raise NotImplementedError()
